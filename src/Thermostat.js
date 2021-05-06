@@ -2,6 +2,7 @@ class Thermostat {
 
   constructor(temperature = 20){
     this.temperature = temperature;
+    this.maxTemperature = 32
   }  
 
   tempUp() {
@@ -14,4 +15,12 @@ class Thermostat {
     }
     return this.temperature -= 10;
   }
+
+  powerSavingMode(value = true){
+    if (value == true){
+      this.maxTemperature = 25
+    } else {
+      this.maxTemperature = 32
+    }
+  };
 }

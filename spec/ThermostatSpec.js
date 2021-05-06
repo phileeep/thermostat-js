@@ -39,4 +39,12 @@ describe('Thermostat', function() {
       expect(thermostat.maxTemperature).toEqual(25);
     });
   });
+
+  describe('Reset', () => {
+    it('Can reset the temperature back to 20 degrees', () => {
+      thermostat.tempUp();
+      thermostat.reset();
+      expect(thermostat.temperature).toEqual(20);
+    });
+  });
 });

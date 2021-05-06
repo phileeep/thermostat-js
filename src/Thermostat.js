@@ -18,9 +18,13 @@ class Thermostat {
 
   powerSavingMode(value = true){
     if (value == true){
-      this.maxTemperature = 25
+      this.maxTemperature = 25;
     } else {
-      this.maxTemperature = 32
+      this.maxTemperature = 32;
     }
   };
-}
+
+  reset() {
+    this.temperature = 20;
+  }
+};

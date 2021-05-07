@@ -14,10 +14,10 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toEqual(20);
     });
     it ('Can increase the temperature', () => {
-      expect(thermostat.tempUp()).toEqual(defaultTemperature + 10);
+      expect(thermostat.tempUp()).toEqual(defaultTemperature + 1);
     });
     it ('Can decrease the temperature', () =>{
-      expect(thermostat.tempDown()).toEqual(defaultTemperature - 10);
+      expect(thermostat.tempDown()).toEqual(defaultTemperature - 1);
     });
     it ('Cannot lower the temperature lower than 10 degrees', () => {
       thermostat.temperature = 10

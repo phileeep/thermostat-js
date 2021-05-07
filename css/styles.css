@@ -1,0 +1,26 @@
+body {
+  background-color: peachpuff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#temp-title {
+  margin-top: 2em;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  background-color: plum;
+  min-height: 20vh;
+  max-width: 800px;
+  border-radius: 25px;
+  padding: 2em;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+}

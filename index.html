@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thermostat</title>
+</head>
+<body>
+  <h1 id="temp-title">Your Nice Local Thermostat</h1>
+  <div class="wrapper">
+    <div class="Thermostat">
+      <button class="btn" id="tempUp">Temperature Up</button>
+      <button class="btn" id="tempDown">Temperature Down</button>
+      <button class="btn" id="resetTemp">Reset Temperature</button>
+      <br>
+      <p>
+        Power saving mode status is:<span id="psm_status">on</span>
+      </p>
+      <button class="btn" id= "psm_on">PSM On</button>
+      <button class="btn" id=" psm_off">PSM Off</button>
+    </div>
+  </div>
+</body>
+<script src="./src/Thermostat.js"></script>
+<script src="./src/Index.js"></script>
+</html>

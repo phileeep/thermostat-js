@@ -7,6 +7,8 @@ class Thermostat {
     this.TEMP_PSM_ON = 25;
     this.TEMP_PSM_OFF = 32;
     this.maxTemperature = this.TEMP_PSM_ON;
+    this.MEDIUM_ENERGY_USAGE_LIMIT = 18;
+    this.HIGH_ENERGY_USAGE_LIMIT = 25;
   }  
 
   getCurrentTemperature(){
@@ -14,14 +16,14 @@ class Thermostat {
   }
 
   tempUp() {
-    return this.temperature += 10;
+    return this.temperature += 1;
   }
 
   tempDown() {
     if (this.temperature <= this.MINIMUM_TEMPERATURE) {
       throw new Error ('Cannot lower the temperature below 10 degrees');
     }
-    return this.temperature -= 10;
+    return this.temperature -= 1;
   }
 
   powerSavingModeOn(){
@@ -33,13 +35,13 @@ class Thermostat {
   };
 
   reset() {
-    this.temperature = 20;
+    this.temperature = this.DEFAULT_TEMPERATURE;
   }
 
   currentUsage() {
-    if (this.temperature < 18){
+    if (this.temperature < this.MEDIUM_ENERGY_USAGE_LIMIT){
       return 'low-usage';
-    } else if (this.temperature <= 25) {
+    } else if (this.temperature <= this.HIGH_ENERGY_USAGE_LIMIT) {
       return 'medium-usage';
     } else {
       return 'high-usage';

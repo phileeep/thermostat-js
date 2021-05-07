@@ -20,7 +20,39 @@ body {
   padding: 2em;
 }
 
+/*---------- Buttons ---------*/
+
 .btn {
   background-color: white;
   color: black;
+  padding: 1em 1.5em;
+  border: 1px solid black;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+
+.psm_on{
+  font-weight: 900;
+  color: green;
+}
+
+.psm_off{
+  font-weight: 900;
+  color: red;
+}
+
+#psm_on_button{
+  background-color: green;
+}
+
+#psm_off_button{
+  background-color: red;
+}
+
+#psm_on_button:hover, #psm_off_button:hover{
+  cursor: pointer;
+  background-color: grey;
 }

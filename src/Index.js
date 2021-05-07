@@ -35,6 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("getCity").addEventListener("click", () => {
     const citySearch = document.getElementById("getCityText").value;
     document.getElementById("getCityText").value = '';
+
+    async function getCityWeather(){
+      await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${citySearch}&units=metric&appid=7128292c1f8f799b763f5b63ce9c1b27`)
+        .then(response => {
+          return response.json()})
+        .then((data) => {
+          document.getElementById("cityTemp").innerHTML = `${data.main.temp} degrees in ${citySearch}`;
+        })
+    };
+    getCityWeather();
   });
 
 
@@ -43,9 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(response => {
         return response.json()})
       .then((data) => {
-        document.getElementById("cityTemp").innerHTML = `${data.main.temp} degrees in ''`;
+        document.getElementById("cityTemp").innerHTML = `${data.main.temp} degrees in London`;
       })
-    }
+    };
 
 getPostData();
 

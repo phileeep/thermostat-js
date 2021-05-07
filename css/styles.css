@@ -44,15 +44,19 @@ button:hover {
   color: red;
 }
 
-#psm_on_button{
+#psmOnButton{
   background-color: green;
 }
 
-#psm_off_button{
+#psmOffButton{
   background-color: red;
 }
 
-#psm_on_button:hover, #psm_off_button:hover{
+#psmOnButton:hover, #psmOffButton:hover{
   cursor: pointer;
   background-color: grey;
+}
+
+#cityTemp{
+  margin-top: 2em;
 }
